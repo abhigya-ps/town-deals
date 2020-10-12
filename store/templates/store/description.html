@@ -1,0 +1,28 @@
+{% extends 'store/main.html' %}
+{% load static %}
+
+{% block title %}
+{{product.name}}
+{% endblock title %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/description.css' %}">
+<div class="desc">
+    <div class="desc-column-left">
+            <img class="desc-image" src="{{product.imageURL}}">
+    </div>
+    <div class="desc-column-right">
+        <div class="product-description">
+            <span> {{product.location}} | {{product.category}} </span>
+            <h1> {{product.name}} </h1>
+            <p> {{product.description}} </p>
+        </div>
+        <div class="product-price">
+            <span> ${{product.price}} </span>
+            <button class="panel__btn add-to-cart update-cart" data-product="{{product.id}}" data-action="add"> Add to Cart </button>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,205 @@
+.products {
+    width: 90%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    grid-gap: 4rem;
+    justify-content: center;
+}
+
+.panel {
+    overflow: hidden;
+    box-shadow: 0px 1px 5px gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 200ms ease-in;
+}
+
+.panel__image {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.panel__text {
+    margin: 0.4rem auto;
+    width: 92%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column-left,
+.column-right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.sub-body {
+    font-size: 90%;
+    font-style: italic;
+    margin-top: 0.4rem;
+}
+
+.column-right {
+    text-align: right;
+}
+
+.double-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 2;
+}
+
+.panel__btn {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border: 2px solid #4BC968;
+    background: transparent;
+    color: #4BC968;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.panel .panel__btn {
+    width: 75%;
+    margin: 1rem auto;
+}
+
+.panel:hover {
+    transform: scale(1.02);
+}
+
+.panel:hover .panel__btn {
+    background: #4BC968;
+    color: white;
+}
+
+p.blurb {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #454545;
+}
+
+.categories {
+    width: 70%;
+    margin: 1rem auto;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.category {
+    margin: 0.5rem 0.3rem;
+}
+
+.categories .category a {
+    padding: 0.3rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid #EB1553;
+    background: transparent;
+    color: #EB1553;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.category a:hover {
+    background: #EB1553;
+    color: white;
+}
+
+.filter-sort {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.categories a,
+.filter-sort a,
+.title-tag a {
+    color: black;
+    text-decoration: none;
+}
+
+.filter-sort form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.filter-sort form button,
+.filter-sort form b,
+.filter-sort form input {
+    margin: 0.3rem 0.2rem;
+}
+
+#min,
+#max {
+    width: 50px;
+    height: 1.5rem;
+    margin: auto 0.2rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.filter-sort button {
+    padding: 0.2rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 0.8rem;
+    background: transparent;
+    color: #454545;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.filter-sort button:hover {
+    background: #454545;
+    color: white;
+}
+
+.filter-sort .price-btn:hover {
+    color: #454545;
+    background: transparent;
+}
+
+.categories a {
+    padding: 0.3rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border: 2px solid #EB1553;
+    background: transparent;
+    color: #EB1553;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.categories a:hover {
+    background: #EB1553;
+    color: white;
+}

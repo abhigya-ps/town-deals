@@ -1,0 +1,1 @@
+web: gunicorn towndeals.wsgi --log-file -

@@ -1,0 +1,88 @@
+{% extends 'store/main.html' %} {% load static %} {% block title %} Home {% endblock title %} 
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/store.css' %}">
+
+<div class="categories">
+    <div class="category"><a href="{% url 'categorize' 'electronics' %}" id="electronics"> Electronics </a></div>
+    <div class="category"><a href="{% url 'categorize' 'clothing' %}" id="clothing"> Clothing </a></div>
+    <div class="category"><a href="{% url 'categorize' 'home' %}" id="home-garden"> Home </a></div>
+    <div class="category"><a href="{% url 'categorize' 'media' %}" id="books-media"> Media </a></div>
+    <div class="category"><a href="{% url 'categorize' 'auto' %}" id="auto"> Auto </a></div>
+    <div class="category"><a href="{% url 'categorize' 'others' %}" id="other"> Others </a></div>
+</div>
+<div class="filter-sort">
+    <form class="filter-sort-form" action="" method="GET">
+        <button class="price-btn"> Price </button>
+        <input type="number" id="min" name="min" placeholder="min" onkeyup="saveValue(this);"> <input type="number" id="max" name="max" placeholder="max" onkeyup="saveValue(this);">
+        <button type="submit"> Apply </button>
+        <button onclick="clearFilters()"> Reset </button>
+        <button type="submit" name="sort" value="low"> Low to High </button>
+        <button type="submit" name="sort" value="high"> High to Low </button>
+        <button type="submit" name="sort" value="relevant"> Most Relevant </button>
+    </form>
+</div>
+
+<div class="products">
+
+    {% for product in products %}
+    <div class="panel">
+        <div class="panel__body">
+            <a class="view" href="{% url 'description' product.id %}">
+                <img src="{{product.imageURL}}" alt="{{product.name}} panel" class="panel__image">
+            </a>
+            <div class="panel__text">
+                <div class="row">
+                    <div class="double-column title-tag">
+                        <a href="{% url 'description' product.id %}">
+                            <h3> {{product.name}} </h3>
+                        </a>
+                    </div>
+                    <div class="column-right">
+                        ${{product.price}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-left sub-body">
+                        {{product.category}}
+                    </div>
+                    <div class="column-right sub-body">
+                        {{product.location}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="panel__btn add-to-cart update-cart" data-product="{{product.id}}" data-action="add"> Add to Cart </button>
+    </div>
+    {% endfor %}
+
+</div>
+
+<script type="text/javascript">
+    document.getElementById("min").value = getSavedValue("min");
+    document.getElementById("max").value = getSavedValue("max");
+
+    function saveValue(e) {
+        var id = e.id;
+        var value = e.value;
+        localStorage.setItem(id, val);
+    }
+
+    function getSavedValue(v) {
+        if (!localStorage.getItem(v)) {
+            return "";
+        }
+        return localStorage.getItem(v);
+    }
+
+    function clearFilters() {
+        localStorage.setItem('min', '');
+        localStorage.setItem('max', '');
+        document.getElementById('min').value = '';
+        document.getElementById('max').value = '';
+    }
+</script>
+
+
+{% endblock content %}

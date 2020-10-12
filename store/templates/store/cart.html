@@ -1,0 +1,65 @@
+{% extends 'store/main.html' %} 
+{% load static %} 
+{% block title %} Cart ({{order.get_cart_items}}) {% endblock title %} 
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+
+<div class="cart-header">
+    <div class="row">
+        <div class="column-left">
+            <span>Items: <strong>{{order.get_cart_items}}</strong></span>
+        </div>
+        <div class="column-right">
+            <a href="{% url 'store' %}"><button class="shop-more-btn"> &#x2190; Shop More </button></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column-left">
+            <span>Total: <strong>${{order.get_cart_total|floatformat:2}}</strong></span>
+        </div>
+        <div class="column-right">
+            <a id="checkout-btn" style="float: right;" href="{% url 'checkout' %}">
+                <button class="checkout-btn"> Checkout </button>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <p id="empty-message"> your cart is empty </p>
+    </div>
+</div>
+{% for item in items %}
+<div class="cart-page">
+    <div class="cart-column-left">
+        <a class="view" href="{% url 'description' item.product.id %}">
+        <img class="cart-image" src="{{item.product.imageURL}}">
+        </a>
+    </div>
+    <div class="cart-column-right">
+        <div class="product-description">
+            <span> {{item.product.location}} | {{item.product.category}} </span>
+            <a href="{% url 'description' item.product.id %}">
+            <h1> {{item.product.name}} </h1>
+            </a>
+        </div>
+        <div class="product-price">
+            <span> ${{item.product.price}} </span>
+            <button class="panel__btn remove-from-cart update-cart" data-product="{{item.product.id}}" data-action="remove"> remove </button>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+<script type="text/javascript">
+    cartItems = "{{cartItems}}";
+    console.log(cartItems);
+    if (cartItems == 0) {
+        document.getElementById('empty-message').style.display = "block";
+        document.getElementById('checkout-btn').style.display = "none";
+    }
+    localStorage.clear();
+</script>
+
+
+{% endblock content %}
