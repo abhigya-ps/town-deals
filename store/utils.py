@@ -107,7 +107,7 @@ def filterData(params, products):
     min_price = params['min']
     min_price = 0.0 if min_price == '' else float(min_price)
     max_price = params['max']
-    max_price = 999.99 if max_price == '' else float(max_price)
+    max_price = 9999.99 if max_price == '' else float(max_price)
 
     filtered_products = []
     for p in products:
