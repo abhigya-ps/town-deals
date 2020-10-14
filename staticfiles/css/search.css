@@ -1,0 +1,122 @@
+.products {
+    width: 90%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+    grid-gap: 4rem;
+    justify-content: center;
+}
+
+.panel {
+    overflow: hidden;
+    box-shadow: 0px 1px 5px gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 200ms ease-in;
+}
+
+.panel__image {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.panel__text {
+    margin: 0.4rem auto;
+    width: 92%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column-left,
+.column-right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.sub-body {
+    font-size: 90%;
+    font-style: italic;
+    margin-top: 0.4rem;
+}
+
+.column-right {
+    text-align: right;
+}
+
+.double-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 2;
+}
+
+.panel__btn {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border: 2px solid #4BC968;
+    background: transparent;
+    color: #4BC968;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.panel .panel__btn {
+    width: 75%;
+    margin: 1rem auto;
+}
+
+.panel:hover {
+    transform: scale(1.02);
+}
+
+.panel:hover .panel__btn {
+    background: #4BC968;
+    color: white;
+}
+
+.title-tag a {
+    color: black;
+    text-decoration: none;
+}
+
+.search-header {
+    /* border: 1px solid red; */
+    margin: 2rem auto;
+    width: 50%;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-header a button {
+    padding: 0.3rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 2px solid #EB1553;
+    background: transparent;
+    color: #EB1553;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background 200ms ease-in, color 200ms ease-in;
+}
+
+.search-header a button:hover {
+    background: #EB1553;
+    color: white;
+}
