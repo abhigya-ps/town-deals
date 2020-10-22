@@ -138,6 +138,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+# EMAIL SETTINGS
+
+DEFAULT_FROM_EMAIL = 'towndeals.confirm@gmail.com'
+SERVER_EMAIL = 'towndeals.confirm@gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'towndeals.confirm@gmail.com'
+EMAIL_HOST_PASSWORD = 'completetransaction'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

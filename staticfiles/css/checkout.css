@@ -256,8 +256,13 @@
         color 200ms ease-in;
 }
 
+.payment-btn {
+    /* float: right; */
+    width: 50%;
+}
+
 .form-btn:hover,
-.paymnet-btn:hover {
+.payment-btn:hover {
     background-color: #4BC968;
     color: #ffffff;
   }

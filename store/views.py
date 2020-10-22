@@ -5,7 +5,7 @@ import datetime
 import os
 
 from .models import *
-from . utils import cookieCart, cartData, guestOrder, sortData, filterData
+from . utils import cookieCart, cartData, guestOrder, sortData, filterData, sendEmail
 
 from django.contrib.auth.forms import UserCreationForm
 from .forms import CreateUserForm, ProductForm
@@ -69,7 +69,6 @@ def processOrder(request):
     transaction_id = datetime.datetime.now().timestamp()
     data = json.loads(request.body)
     
-
     if request.user.is_authenticated:
         customer = request.user.customer
         order, created = Order.objects.get_or_create(customer=customer, complete=False)
@@ -84,6 +83,8 @@ def processOrder(request):
         order.complete = True
     order.save()
 
+    sendEmail(data)
+    
     if order.shipping == True:
         ShippingAddress.objects.create(
             customer=customer,

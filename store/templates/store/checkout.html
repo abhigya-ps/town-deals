@@ -47,7 +47,7 @@ Checkout
             <small> Paypal Options </small>
             <hr><br>
             <div id="paypal-button-container"></div>
-            <!-- <button id="make-payment" class="payment-btn"> Make Payment </button> -->
+            <button id="make-payment" class="payment-btn" onClick="submitFormData()"> Make Payment </button>
         </div>
     </div>
 
@@ -201,7 +201,7 @@ Checkout
 	    	.then((response) => response.json())
 	    	.then((data) => {
 				console.log('Success:', data);
-				alert('Transaction completed');  
+				alert('Transaction Completed!');  
 
 				cart = {}
 				document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"

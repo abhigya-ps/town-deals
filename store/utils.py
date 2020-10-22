@@ -1,6 +1,7 @@
 import json
 from .models import *
 
+from django.core.mail import EmailMessage
 
 def cookieCart(request):
     try:
@@ -115,3 +116,12 @@ def filterData(params, products):
             filtered_products.append(p)
 
     return filtered_products
+
+def sendEmail(data):
+    name = data['form']['name']
+    email_id = data['form']['email']
+    total = data['form']['total']
+    message = 'Hello ' + name + '! Your order has been confirmed. You spent a total of $' + total + '.'
+    msg = EmailMessage('TownDeals Confirmation!',
+                       message, to=[email_id])
+    msg.send()

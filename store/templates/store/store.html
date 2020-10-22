@@ -1,4 +1,4 @@
-{% extends 'store/main.html' %} {% load static %} {% block title %} Home {% endblock title %} 
+{% extends 'store/main.html' %} {% load static %} {% block title %} Home {% endblock title %}
 
 {% block content %}
 
@@ -15,7 +15,8 @@
 <div class="filter-sort">
     <form class="filter-sort-form" action="" method="GET">
         <button class="price-btn"> Price </button>
-        <input type="number" id="min" name="min" placeholder="min" onkeyup="saveValue(this);"> <input type="number" id="max" name="max" placeholder="max" onkeyup="saveValue(this);">
+        <input type="number" id="min" name="min" placeholder="min" onkeyup="saveValue(this);"> <input type="number"
+            id="max" name="max" placeholder="max" onkeyup="saveValue(this);">
         <button type="submit"> Apply </button>
         <button onclick="clearFilters()"> Reset </button>
         <button type="submit" name="sort" value="low"> Low to High </button>
@@ -53,7 +54,8 @@
                 </div>
             </div>
         </div>
-        <button class="panel__btn add-to-cart update-cart" data-product="{{product.id}}" data-action="add"> Add to Cart </button>
+        <button class="panel__btn add-to-cart update-cart" data-product="{{product.id}}" data-action="add"> Add to Cart
+        </button>
     </div>
     {% endfor %}
 
@@ -82,6 +84,12 @@
         document.getElementById('min').value = '';
         document.getElementById('max').value = '';
     }
+
+    categoryBtns = document.getElementsByClassName('category');
+    Array.from(categoryBtns).forEach((btn) => {
+        btn.addEventListener('click', clearFilters);
+    });
+
 </script>
 
 
