@@ -117,9 +117,9 @@ def filterData(params, products):
 
     return filtered_products
 
-def sendEmail(data):
-    name = data['form']['name']
-    email_id = data['form']['email']
+def sendEmail(data, request):
+    name = data['form']['name'] if data['form']['name'] else str(request.user)
+    email_id = data['form']['email'] if data['form']['email'] else request.user.email
     total = data['form']['total']
     message = 'Hello ' + name + '! Your order has been confirmed. You spent a total of $' + total + '.'
     msg = EmailMessage('TownDeals Confirmation!',

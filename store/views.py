@@ -83,7 +83,7 @@ def processOrder(request):
         order.complete = True
     order.save()
 
-    sendEmail(data)
+    sendEmail(data, request)
     
     if order.shipping == True:
         ShippingAddress.objects.create(
