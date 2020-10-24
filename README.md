@@ -3,7 +3,7 @@ Ecommerce platform dedicated to purchase of used, local products. Add-to-Cart an
 available to guest users. Name, email, and shipping information required. Login and account creation not a requirement.
 
 * Built the backend using Django in Python. Created an app in the project dedicated to flow of data from the frontend to the database and
-back through URLs parameters and JSON data.
+back through URL parameters and JSON data.
 * Deployed the frontend in JavaScript, HTML, and CSS. Served JavaScript and CSS as static files. Passed HTML as templates to the the frontend 
 through URL routes in Django.
 * Initialized a database using PostgreSQL. Stored customer data, product data, order history for each customer, and shipping information for each customer.
