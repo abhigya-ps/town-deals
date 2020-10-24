@@ -7,7 +7,7 @@ back through URL parameters and JSON data.
 * Deployed the frontend in JavaScript, HTML, and CSS. Served JavaScript and CSS as static files. Passed HTML as templates to the the frontend 
 through URL routes in Django.
 * Initialized a database using PostgreSQL. Stored customer data, product data, order history for each customer, and shipping information for each customer.
-Utilized relational database paradigm linking ordered items to respective orders and orders to respective customers through Foreign Keys in Django Models
+Utilized relational database paradigm linking products ordered to respective orders and requested orders to respective customers through Foreign Keys in Django Models
 
 ### External Tech
 
