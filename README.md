@@ -17,5 +17,5 @@ Utilized relational database paradigm linking products ordered to respective ord
 * Hosted the database on AWS RDS as a live database migrating from the locally available SQLite3 provided by Django.   
 <br>
 <p align="center">
-  <img src="https://github.com/abhigya-ps/town-deals/blob/main/images/towndeals_images.JPG" alt="demo_store" width="60%" align="center">
+  <img src="https://github.com/abhigya-ps/town-deals/blob/main/images/towndeals_images.JPG" alt="demo_store" width="80%" align="center">
 </p>
