@@ -14,7 +14,8 @@ Utilized relational database paradigm linking products ordered to respective ord
 * Deployed the website on Heroku and stored project credentials inside Heroku's configuration variables.
 * Hosted images(product images), CSS, and JavaScript as static files in S3 Buckets provided by AWS.
 * Configured pgAdmin facilitating systematic visualisation and management of the PostgreSQL database.
-* Hosted the database on AWS RDS as a live database migrating from the locally available SQLite3 provided by Django.   
+* Hosted the database on AWS RDS as a live database migrating from the locally available SQLite3 provided by Django. 
+* Authorized exchange of funds with PayPal Developer Sandbox representing verified transactions.
 <br>
 <p align="center">
   <img src="https://github.com/abhigya-ps/town-deals/blob/main/images/towndeals_images.JPG" alt="demo_store" width="80%" align="center">
