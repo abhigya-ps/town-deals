@@ -1,6 +1,6 @@
 # [Town Deals](https://town-deals.herokuapp.com/)
 Ecommerce platform dedicated to purchase of used, local products. Add-to-Cart and Checkout options
-available to guest users. Name, email, and shipping information required. Login and Account creation not a requirement.
+available to guest users. Name, email, and shipping information required. Login and account creation not a requirement.
 
 * Built the backend using Django in Python. Created an app in the project dedicated to flow of data from the frontend to the database and
 back through URLs parameters and JSON data.
