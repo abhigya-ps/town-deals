@@ -15,7 +15,7 @@ Utilized relational database paradigm linking ordered items to respective orders
 * Hosted images(product images), CSS, and JavaScript as static files in S3 Buckets provided by AWS.
 * Configured pgAdmin facilitating systematic visualisation and management of the PostgreSQL database.
 * Hosted the database on AWS RDS as a live database migrating from the locally available SQLite3 provided by Django.   
-
+<br>
 <p align="center">
   <img src="https://github.com/abhigya-ps/town-deals/blob/main/images/towndeals_images.JPG" alt="demo_store" width="60%" align="center">
 </p>
