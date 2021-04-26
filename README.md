@@ -1,4 +1,5 @@
-# [Town Deals](https://town-deals.herokuapp.com/)
+# Town Deals #
+<!--(https://town-deals.herokuapp.com/) -->
 Ecommerce platform dedicated to purchase of used, local products. Add-to-Cart and Checkout options
 available to guest users. Name, email, and shipping information required. Login and account creation not a requirement.
 
